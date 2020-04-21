@@ -1591,3 +1591,7 @@ func (ch *Channel) Reject(tag uint64, requeue bool) error {
 		Requeue:     requeue,
 	})
 }
+
+func (ch *Channel) IsClose() bool {
+	return ch.closed == 1
+}
